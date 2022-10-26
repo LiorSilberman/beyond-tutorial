@@ -7,11 +7,11 @@
 sudo -n dnf install -y pipenv
 
 cd /vagrant
-#Install dependencies with Pipenv
+# Install dependencies with Pipenv
 pipenv sync --dev
 
-# run our app. setsid, the patentheses and "&" are used to perform a "double
+# run our app. setsid, the parentheses and "&" are used to perform a "double
 # fork" so that out app stays up after the setup script finishes.
-#The app logs are redirected to the 'runserver.log' file.
+# The app logs are redirected to the 'runserver.log' file.
 (setsid pipenv run \
 	python manage.py runserver 0.0.0.0:8000 > runserver.log 2>&1 &)
