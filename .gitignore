@@ -131,3 +131,5 @@ dmypy.json
 # Vagrant
 .vagrant
 
+# data_base
+db.sqlite3
